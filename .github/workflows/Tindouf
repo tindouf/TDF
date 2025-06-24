@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مشروع Tindouf (TDF)</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.7.5/dist/web3.min.js"></script>
+  <script src="app.js"></script>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; text-align: center; padding: 20px; direction: rtl; }
+    .section { background: white; margin: 20px auto; padding: 20px; max-width: 600px; border-radius: 8px; box-shadow: 0 0 5px #ccc; }
+    button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    input, textarea { padding: 8px; width: 80%; margin: 5px 0; }
+    h2 { color: #007bff; }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h1>عملة TDF | مشروع Tindouf 💎</h1>
+    <p>شبكة لامركزية مستقلة مبنية على Binance</p>
+    <a href="Tindouf_Whitepaper.pdf" download>📄 تحميل الورقة البيضاء</a>
+  </div>
+
+  <div class="section">
+    <h2>📊 Staking</h2>
+    <input type="number" id="stakeAmount" placeholder="أدخل الكمية التي تريد تجميدها (TDF)" /><br>
+    <button onclick="stakeTokens()">Stake</button>
+    <button onclick="claimRewards()">سحب الأرباح</button>
+    <button onclick="unstakeTokens()">إلغاء التجميد</button>
+  </div>
+
+  <div class="section">
+    <h2>🎁 Airdrop (خاص بالمالك)</h2>
+    <textarea id="airdropAddresses" rows="4" placeholder="أدخل عناوين المستلمين مفصولة بفاصلة..."></textarea><br>
+    <input type="number" id="airdropAmount" placeholder="كمية TDF لكل مستلم" /><br>
+    <button onclick="sendAirdrop()">تنفيذ Airdrop</button>
+  </div>
+
+</body>
+</html>
